@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)file:///C:/Users/gabri/Downloads/index_2.html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#1a1a1a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Gomez Intermediation">
+<link rel="manifest" href="file:///C:/Users/gabri/Downloads/manifest.json">
+<link rel="apple-touch-icon" href="file:///C:/Users/gabri/Downloads/icon-192.png">
+<title>Gomez Intermediation</title>
+<link href="./Gomez Intermediation_files/css2" rel="stylesheet">
+<link rel="stylesheet" href="./Gomez Intermediation_files/tabler-icons.min.css">
+<style>
+:root{--black:#0a0a0a;--dark:#141414;--dark2:#1e1e1e;--mid:#2a2a2a;--border:#303030;--border2:#3d3d3d;--tm:#888;--ts:#bbb;--text:#e8e8e8;--white:#f5f5f5}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:var(--black);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;-webkit-tap-highlight-color:transparent;overscroll-behavior:none}
+input,select,textarea{font-family:'Inter',sans-serif;font-size:14px;background:var(--dark2);color:var(--white);border:1px solid var(--border);border-radius:8px;padding:9px 12px;outline:none;width:100%;transition:border-color .15s}
+input:focus,select:focus,textarea:focus{border-color:var(--border2)}
+select option{background:var(--dark2)}
+textarea{resize:none;min-height:72px}
+#app{display:flex;flex-direction:column;height:100dvh;max-width:480px;margin:0 auto}
+.topbar{padding:14px 18px 10px;padding-top:calc(14px + env(safe-area-inset-top));background:var(--dark);border-bottom:1px solid var(--border);flex-shrink:0;display:flex;align-items:center;justify-content:space-between}
+.lw{display:flex;align-items:center;gap:10px}
+.lm{width:30px;height:30px;background:var(--white);border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;color:var(--black)}
+.ln{font-size:14px;font-weight:500;color:var(--white)}
+.ls{font-size:10px;color:var(--tm);font-family:'DM Mono',monospace;margin-top:1px}
+.tr{font-family:'DM Mono',monospace;font-size:10px;color:var(--tm);letter-spacing:1px;text-transform:uppercase}
+.content{flex:1;overflow-y:auto;padding:16px;-webkit-overflow-scrolling:touch}
+.bnav{display:flex;background:var(--dark);border-top:1px solid var(--border);padding-bottom:env(safe-area-inset-bottom);flex-shrink:0}
+.bi{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 0;font-size:9px;letter-spacing:.8px;text-transform:uppercase;color:var(--tm);cursor:pointer;transition:color .15s;border:none;background:none;font-family:'DM Mono',monospace}
+.bi i{font-size:19px}
+.bi.on{color:var(--white)}
+.tab{display:none}.tab.on{display:block}
+.mr{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:20px}
+.mc{background:var(--dark);border:1px solid var(--border);border-radius:10px;padding:14px 16px}
+.ml{font-size:10px;color:var(--tm);font-family:'DM Mono',monospace;margin-bottom:6px}
+.mv{font-size:34px;font-weight:300;color:var(--white);line-height:1;letter-spacing:-1px}
+.ms{font-size:10px;color:var(--tm);margin-top:4px}
+.fn{display:flex;gap:6px;margin-bottom:20px;overflow-x:auto;padding-bottom:4px}
+.fs{background:var(--dark);border:1px solid var(--border);border-radius:8px;padding:10px 12px;text-align:center;min-width:60px;flex-shrink:0}
+.fs.hi{border-color:var(--border2)}
+.fn2{font-size:26px;font-weight:300;color:var(--white);line-height:1;letter-spacing:-1px}
+.fl{font-size:9px;color:var(--tm);font-family:'DM Mono',monospace;text-transform:uppercase;margin-top:3px}
+.st{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;color:var(--tm);text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.st::after{content:'';flex:1;height:1px;background:var(--border)}
+.fi{display:flex;align-items:center;gap:10px;background:var(--dark);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.fi.urg{border-left:2px solid #888}
+.fi.hoj{border-left:2px solid var(--white)}
+.av{width:36px;height:36px;border-radius:50%;background:var(--mid);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;color:var(--ts);flex-shrink:0;border:1px solid var(--border)}
+.fin{flex:1;min-width:0}
+.fn3{font-size:14px;font-weight:500;color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fn4{font-size:11px;color:var(--tm);margin-top:1px}
+.bdg{font-size:10px;padding:3px 8px;border-radius:4px;font-family:'DM Mono',monospace;white-space:nowrap;font-weight:500}
+.sf{background:#1e2530;color:#6b9fd4;border:1px solid #2a3a4a}
+.sm{background:#2a2416;color:#c4a260;border:1px solid #3a3020}
+.sq{background:#2a1e1e;color:#d4706b;border:1px solid #3a2828}
+.sp{background:#1e2a1e;color:#6bc47a;border:1px solid #283a28}
+.sc{background:var(--white);color:var(--black);border:1px solid var(--white)}
+.ct{display:flex;gap:8px;margin-bottom:10px}
+.ct input{flex:1}
+.fr{display:flex;gap:6px;margin-bottom:12px;overflow-x:auto;padding-bottom:2px}
+.ch{display:inline-flex;align-items:center;padding:5px 12px;border-radius:6px;font-size:10px;border:1px solid var(--border);color:var(--tm);cursor:pointer;white-space:nowrap;font-family:'DM Mono',monospace;background:transparent;transition:all .15s}
+.ch.on{background:var(--white);color:var(--black);border-color:var(--white)}
+.pc{background:var(--dark);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:8px}
+.ph{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px}
+.pn{font-size:14px;font-weight:500;color:var(--white)}
+.ps{font-size:11px;color:var(--tm);margin-top:2px}
+.pf{display:flex;justify-content:space-between;align-items:center;margin-top:10px;padding-top:10px;border-top:1px solid var(--border)}
+.pca{font-size:10px;color:var(--tm);font-family:'DM Mono',monospace}
+.pa{display:flex;gap:6px}
+.ib{background:none;border:none;cursor:pointer;color:var(--tm);padding:4px;font-size:17px;transition:color .15s;line-height:1}
+.ib:active{color:var(--white)}
+.fd{font-size:10px;font-family:'DM Mono',monospace}
+.fd.lt{color:#d4706b}.fd.ok{color:var(--tm)}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:9px 16px;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--text);font-size:13px;cursor:pointer;width:auto;white-space:nowrap;font-family:'Inter',sans-serif;transition:all .15s}
+.btn:active{opacity:.75}
+.btn.pr{background:var(--white);border-color:var(--white);color:var(--black);font-weight:500}
+.btn.fu{width:100%;justify-content:center}
+.btn.sm{padding:6px 12px;font-size:12px}
+.mo{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:200;display:none;align-items:flex-end}
+.mo.on{display:flex}
+.md{background:var(--dark);border-top:1px solid var(--border);border-radius:16px 16px 0 0;padding:20px;padding-bottom:calc(20px + env(safe-area-inset-bottom));width:100%;max-height:90dvh;overflow-y:auto}
+.mh{width:36px;height:4px;background:var(--border2);border-radius:2px;margin:0 auto 18px}
+.mt{font-size:18px;font-weight:500;color:var(--white);margin-bottom:16px}
+.fg{margin-bottom:12px}
+.lb{font-size:10px;color:var(--tm);font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px;display:block}
+.rw{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mf{display:flex;gap:8px;margin-top:16px}
+.mf .btn{flex:1;justify-content:center}
+.so{background:var(--dark2);border:1px solid var(--border);border-radius:10px;padding:16px;font-size:14px;line-height:1.7;color:var(--text);min-height:80px;white-space:pre-wrap;margin-bottom:10px}
+.lt2{color:var(--tm);font-style:italic;font-size:13px}
+.sa{display:flex;gap:8px;justify-content:flex-end;margin-bottom:14px}
+.sv{background:var(--dark);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:8px}
+.sm2{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.sl{font-size:10px;color:var(--tm);font-family:'DM Mono',monospace}
+.st2{font-size:13px;color:var(--ts);line-height:1.6}
+.ic{background:var(--dark);border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:14px}
+.ig{background:var(--dark);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:8px}
+.id{font-size:9px;font-family:'DM Mono',monospace;letter-spacing:2px;color:var(--tm);text-transform:uppercase;margin-bottom:3px}
+.if{font-size:13px;font-weight:500;color:var(--white);margin-bottom:8px}
+.ix{font-size:13px;color:var(--ts);line-height:1.6;min-height:50px}
+.io{display:flex;justify-content:flex-end;margin-top:10px;padding-top:10px;border-top:1px solid var(--border)}
+.em{text-align:center;padding:40px 16px;color:var(--tm);font-size:13px;line-height:1.8}
+.dv{height:1px;background:var(--border);margin:16px 0}
+#toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:var(--white);color:var(--black);padding:8px 18px;border-radius:100px;font-size:12px;z-index:999;opacity:0;transition:opacity .25s;pointer-events:none;font-family:'DM Mono',monospace;font-weight:500;white-space:nowrap}
+</style>
+</head>
+<body>
+<div id="app">
+  <div class="topbar">
+    <div class="lw">
+      <div class="lm">G</div>
+      <div>
+        <div class="ln">Gomez Intermediation</div>
+        <div class="ls">CRM · Prospecção</div>
+      </div>
+    </div>
+    <div class="tr" id="tdate">SEX., 22 DE MAI.</div>
+  </div>
+  <div class="content">
+    <div id="t0" class="tab on">
+      <div class="mr">
+        <div class="mc" onclick="ST(&#39;t1&#39;)"><div class="ml">Prospects</div><div class="mv" id="m0">3</div><div class="ms">cadastrados</div></div>
+        <div class="mc"><div class="ml">Ativos</div><div class="mv" id="m1">2</div><div class="ms">mornos+quentes</div></div>
+        <div class="mc"><div class="ml">Propostas</div><div class="mv" id="m2">1</div><div class="ms">aguardando</div></div>
+        <div class="mc"><div class="ml">Fechados</div><div class="mv" id="m3">0</div><div class="ms">no total</div></div>
+      </div>
+      <div class="st">Funil de vendas</div>
+      <div class="fn">
+        <div class="fs"><div class="fn2" id="f0">0</div><div class="fl">Frio</div></div>
+        <div class="fs"><div class="fn2" id="f1">1</div><div class="fl">Morno</div></div>
+        <div class="fs hi"><div class="fn2" id="f2">1</div><div class="fl">Quente</div></div>
+        <div class="fs"><div class="fn2" id="f3">1</div><div class="fl">Proposta</div></div>
+        <div class="fs"><div class="fn2" id="f4">0</div><div class="fl">Fechado</div></div>
+      </div>
+      <div class="st">Follow-ups prioritários</div>
+      <div id="ful"><div class="fi hoj"><div class="av">FC</div><div class="fin"><div class="fn3">Fernanda Costa</div><div class="fn4">Datejust 36</div></div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px"><span class="bdg sp">Proposta</span><button class="btn sm" onclick="SP(2)"><i class="ti ti-message-bolt"></i></button></div></div><div class="fi hoj"><div class="av">RA</div><div class="fin"><div class="fn3">Ricardo Alves</div><div class="fn4">Submariner Date</div></div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px"><span class="bdg sq">Quente</span><button class="btn sm" onclick="SP(1)"><i class="ti ti-message-bolt"></i></button></div></div></div>
+    </div>
+    <div id="t1" class="tab">
+      <div class="ct">
+        <input type="search" placeholder="Buscar..." id="csq" oninput="RC()">
+        <button class="btn pr" onclick="OM()"><i class="ti ti-plus"></i></button>
+      </div>
+      <div class="fr">
+        <button class="ch on" onclick="SF(this,&#39;t&#39;)">Todos</button>
+        <button class="ch" onclick="SF(this,&#39;frio&#39;)">Frio</button>
+        <button class="ch" onclick="SF(this,&#39;morno&#39;)">Morno</button>
+        <button class="ch" onclick="SF(this,&#39;quente&#39;)">Quente</button>
+        <button class="ch" onclick="SF(this,&#39;proposta&#39;)">Proposta</button>
+        <button class="ch" onclick="SF(this,&#39;fechado&#39;)">Fechado</button>
+      </div>
+      <div id="crl"><div class="pc"><div class="ph"><div><div class="pn">Ricardo Alves</div><div class="ps">Sócio · Construtora RA</div></div><span class="bdg sq">Quente</span></div><div style="font-size:12px;color:var(--tm);margin-bottom:2px"><i class="ti ti-watch" style="font-size:13px;vertical-align:-2px"></i> Submariner Date</div><div class="pf"><div style="display:flex;align-items:center;gap:8px"><span class="pca">LinkedIn</span><span class="fd lt"><i class="ti ti-clock" style="font-size:12px"></i> 2026-05-22</span></div><div class="pa"><button class="ib" onclick="SP(1)"><i class="ti ti-message-bolt"></i></button><button class="ib" onclick="EP(1)"><i class="ti ti-edit"></i></button><button class="ib" onclick="DP(1)"><i class="ti ti-trash"></i></button></div></div></div><div class="pc"><div class="ph"><div><div class="pn">Fernanda Costa</div><div class="ps">Sócia · FC Advocacia</div></div><span class="bdg sp">Proposta</span></div><div style="font-size:12px;color:var(--tm);margin-bottom:2px"><i class="ti ti-watch" style="font-size:13px;vertical-align:-2px"></i> Datejust 36</div><div class="pf"><div style="display:flex;align-items:center;gap:8px"><span class="pca">Indicação</span><span class="fd lt"><i class="ti ti-clock" style="font-size:12px"></i> 2026-05-22</span></div><div class="pa"><button class="ib" onclick="SP(2)"><i class="ti ti-message-bolt"></i></button><button class="ib" onclick="EP(2)"><i class="ti ti-edit"></i></button><button class="ib" onclick="DP(2)"><i class="ti ti-trash"></i></button></div></div></div><div class="pc"><div class="ph"><div><div class="pn">Marcos Pereira</div><div class="ps">CEO · MP Agro</div></div><span class="bdg sm">Morno</span></div><div style="font-size:12px;color:var(--tm);margin-bottom:2px"><i class="ti ti-watch" style="font-size:13px;vertical-align:-2px"></i> GMT-Master II</div><div class="pf"><div style="display:flex;align-items:center;gap:8px"><span class="pca">Presencial</span><span class="fd ok">2026-06-15</span></div><div class="pa"><button class="ib" onclick="SP(3)"><i class="ti ti-message-bolt"></i></button><button class="ib" onclick="EP(3)"><i class="ti ti-edit"></i></button><button class="ib" onclick="DP(3)"><i class="ti ti-trash"></i></button></div></div></div></div>
+    </div>
+    <div id="t2" class="tab">
+      <div class="ic">
+        <div class="fg"><label class="lb">Nome</label><input id="sn" placeholder="Ex: Carlos"></div>
+        <div class="fg"><label class="lb">Cargo / contexto</label><input id="sc" placeholder="Ex: CEO da Construtora X"></div>
+        <div class="fg"><label class="lb">Canal</label>
+          <select id="sk">
+            <option>WhatsApp — indicação</option>
+            <option>WhatsApp — frio com escassez</option>
+            <option>WhatsApp — follow-up retomada</option>
+            <option>WhatsApp — pedir indicação</option>
+            <option>LinkedIn — primeiro contato</option>
+            <option>Presencial — evento</option>
+          </select>
+        </div>
+        <div class="fg"><label class="lb">Contexto adicional</label><input id="sx" placeholder="Ex: gosta de golfe, tem Submariner..."></div>
+        <button class="btn pr fu" onclick="GS()"><i class="ti ti-sparkles"></i> Gerar script com IA</button>
+      </div>
+      <div class="so" id="sout"><span class="lt2">Preencha os campos e gere o script...</span></div>
+      <div class="sa" id="sac" style="display:none">
+        <button class="btn sm" onclick="CS()"><i class="ti ti-copy"></i> Copiar</button>
+        <button class="btn sm pr" onclick="SS()"><i class="ti ti-bookmark"></i> Salvar</button>
+      </div>
+      <div id="svs" style="display:none">
+        <div class="dv"></div>
+        <div class="st">Scripts salvos</div>
+        <div id="svl"></div>
+      </div>
+    </div>
+    <div id="t3" class="tab">
+      <div class="ic">
+        <div class="fg"><label class="lb">Pilar de conteúdo</label>
+          <select id="ip">
+            <option>Educação (história dos modelos)</option>
+            <option>Autoridade (investimento em Rolex)</option>
+            <option>Aspiração (bastidores e peças)</option>
+            <option>Conexão (enquetes e interação)</option>
+            <option>Prova Social (entregas e clientes)</option>
+          </select>
+        </div>
+        <div class="fg"><label class="lb">Tom</label>
+          <select id="it">
+            <option>Sofisticado e consultivo</option>
+            <option>Direto e assertivo</option>
+            <option>Educativo e informativo</option>
+            <option>Exclusivo e escasso</option>
+          </select>
+        </div>
+        <button class="btn pr fu" onclick="GC()"><i class="ti ti-calendar-bolt"></i> Gerar semana com IA</button>
+      </div>
+      <div id="igc"><div class="em">Selecione o pilar e o tom,<br>depois clique em gerar.</div></div>
+    </div>
+  </div>
+  <nav class="bnav">
+    <button class="bi on" onclick="ST(&#39;t0&#39;)"><i class="ti ti-layout-dashboard"></i>Painel</button>
+    <button class="bi" onclick="ST(&#39;t1&#39;)"><i class="ti ti-users"></i>CRM</button>
+    <button class="bi" onclick="ST(&#39;t2&#39;)"><i class="ti ti-message-bolt"></i>Scripts</button>
+    <button class="bi" onclick="ST(&#39;t3&#39;)"><i class="ti ti-brand-instagram"></i>Instagram</button>
+  </nav>
+</div>
+<div class="mo" id="modal">
+  <div class="md">
+    <div class="mh"></div>
+    <div class="mt" id="mtitle">Novo prospect</div>
+    <div class="rw">
+      <div class="fg"><label class="lb">Nome *</label><input id="fn"></div>
+      <div class="fg"><label class="lb">Empresa</label><input id="fe"></div>
+    </div>
+    <div class="rw">
+      <div class="fg"><label class="lb">Cargo</label><input id="fc"></div>
+      <div class="fg"><label class="lb">Canal</label>
+        <select id="fk"><option>WhatsApp</option><option>LinkedIn</option><option>Presencial</option><option>Instagram</option><option>Indicação</option></select>
+      </div>
+    </div>
+    <div class="rw">
+      <div class="fg"><label class="lb">Status</label>
+        <select id="fst"><option value="frio">Frio</option><option value="morno">Morno</option><option value="quente">Quente</option><option value="proposta">Proposta</option><option value="fechado">Fechado</option></select>
+      </div>
+      <div class="fg"><label class="lb">Follow-up</label><input type="date" id="ff"></div>
+    </div>
+    <div class="fg"><label class="lb">Interesse / modelo</label><input id="fi" placeholder="Ex: Submariner, GMT..."></div>
+    <div class="fg"><label class="lb">Notas</label><textarea id="fno" placeholder="Contexto e observações..."></textarea></div>
+    <div class="mf">
+      <button class="btn" onclick="CM()">Cancelar</button>
+      <button class="btn pr" onclick="SV()">Salvar</button>
+    </div>
+  </div>
+</div>
+<div id="toast"></div>
+<script>
+const DS=['Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo'];
+const FS=['Carrossel','Story interativo','Reels 30s','Story','Post imagem','Story','Post/descanso'];
+let PP=JSON.parse(localStorage.getItem('gi_p')||'[]');
+let SL=JSON.parse(localStorage.getItem('gi_s')||'[]');
+let NI=parseInt(localStorage.getItem('gi_n')||'1');
+let FA='t',EI=null,LS='',IC=[];
+if(!PP.length){
+  PP=[
+    {id:1,nome:"Ricardo Alves",empresa:"Construtora RA",cargo:"Sócio",canal:"LinkedIn",status:"quente",followup:new Date().toISOString().split('T')[0],interesse:"Submariner Date",notas:"Quer upgrade do relógio atual."},
+    {id:2,nome:"Fernanda Costa",empresa:"FC Advocacia",cargo:"Sócia",canal:"Indicação",status:"proposta",followup:new Date().toISOString().split('T')[0],interesse:"Datejust 36",notas:"Presente para o marido."},
+    {id:3,nome:"Marcos Pereira",empresa:"MP Agro",cargo:"CEO",canal:"Presencial",status:"morno",followup:"2026-06-15",interesse:"GMT-Master II",notas:"Timing não está certo ainda."}
+  ];NI=4;PER();
+}
+const now=new Date();
+document.getElementById('tdate').textContent=now.toLocaleDateString('pt-BR',{weekday:'short',day:'2-digit',month:'short'}).toUpperCase();
+function PER(){localStorage.setItem('gi_p',JSON.stringify(PP));localStorage.setItem('gi_s',JSON.stringify(SL));localStorage.setItem('gi_n',NI)}
+function ST(t){
+  document.querySelectorAll('.tab').forEach(e=>e.classList.remove('on'));
+  document.querySelectorAll('.bi').forEach(e=>e.classList.remove('on'));
+  document.getElementById(t).classList.add('on');
+  ['t0','t1','t2','t3'].forEach((n,i)=>{if(n===t)document.querySelectorAll('.bi')[i].classList.add('on')});
+  if(t==='t0')UD();if(t==='t1')RC();
+}
+function BD(s){const m={frio:'sf',morno:'sm',quente:'sq',proposta:'sp',fechado:'sc'};const l={frio:'Frio',morno:'Morno',quente:'Quente',proposta:'Proposta',fechado:'Fechado'};return`<span class="bdg ${m[s]||'sf'}">${l[s]||s}</span>`}
+function UD(){
+  document.getElementById('m0').textContent=PP.length;
+  document.getElementById('m1').textContent=PP.filter(p=>p.status==='morno'||p.status==='quente').length;
+  document.getElementById('m2').textContent=PP.filter(p=>p.status==='proposta').length;
+  document.getElementById('m3').textContent=PP.filter(p=>p.status==='fechado').length;
+  ['frio','morno','quente','proposta','fechado'].forEach((s,i)=>document.getElementById('f'+i).textContent=PP.filter(p=>p.status===s).length);
+  const td=new Date().toISOString().split('T')[0];
+  const ug=PP.filter(p=>p.followup&&p.followup<=td&&p.status!=='fechado').sort((a,b)=>a.followup>b.followup?1:-1);
+  const dv=document.getElementById('ful');
+  if(!ug.length){dv.innerHTML='<div class="em">Sem follow-ups urgentes hoje.</div>';return}
+  dv.innerHTML=ug.map(p=>{
+    const ini=p.nome.split(' ').slice(0,2).map(x=>x[0]).join('').toUpperCase();
+    const it=p.followup===td;
+    return`<div class="fi ${it?'hoj':'urg'}"><div class="av">${ini}</div><div class="fin"><div class="fn3">${p.nome}</div><div class="fn4">${p.interesse||p.canal}</div></div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px">${BD(p.status)}<button class="btn sm" onclick="SP(${p.id})"><i class="ti ti-message-bolt"></i></button></div></div>`;
+  }).join('');
+}
+function SF(el,s){document.querySelectorAll('.ch').forEach(c=>c.classList.remove('on'));el.classList.add('on');FA=s;RC()}
+function RC(){
+  const q=(document.getElementById('csq').value||'').toLowerCase();
+  let li=PP;
+  if(FA!=='t')li=li.filter(p=>p.status===FA);
+  if(q)li=li.filter(p=>p.nome.toLowerCase().includes(q)||(p.empresa||'').toLowerCase().includes(q));
+  const dv=document.getElementById('crl');
+  if(!li.length){dv.innerHTML='<div class="em">Nenhum prospect encontrado.</div>';return}
+  const td=new Date().toISOString().split('T')[0];
+  dv.innerHTML=li.map(p=>{
+    const fu=p.followup?(p.followup<=td?`<span class="fd lt"><i class="ti ti-clock" style="font-size:12px"></i> ${p.followup}</span>`:`<span class="fd ok">${p.followup}</span>`):'';
+    return`<div class="pc"><div class="ph"><div><div class="pn">${p.nome}</div><div class="ps">${[p.cargo,p.empresa].filter(Boolean).join(' · ')}</div></div>${BD(p.status)}</div>${p.interesse?`<div style="font-size:12px;color:var(--tm);margin-bottom:2px"><i class="ti ti-watch" style="font-size:13px;vertical-align:-2px"></i> ${p.interesse}</div>`:''}<div class="pf"><div style="display:flex;align-items:center;gap:8px"><span class="pca">${p.canal}</span>${fu}</div><div class="pa"><button class="ib" onclick="SP(${p.id})"><i class="ti ti-message-bolt"></i></button><button class="ib" onclick="EP(${p.id})"><i class="ti ti-edit"></i></button><button class="ib" onclick="DP(${p.id})"><i class="ti ti-trash"></i></button></div></div></div>`;
+  }).join('');
+}
+function OM(pf){
+  EI=pf?pf.id:null;
+  document.getElementById('mtitle').textContent=EI?'Editar prospect':'Novo prospect';
+  ['fn','fe','fc','fi','fno'].forEach((k,i)=>document.getElementById(k).value=pf?[pf.nome,pf.empresa,pf.cargo,pf.interesse,pf.notas][i]||'':'');
+  document.getElementById('fk').value=pf?.canal||'WhatsApp';
+  document.getElementById('fst').value=pf?.status||'frio';
+  document.getElementById('ff').value=pf?.followup||'';
+  document.getElementById('modal').classList.add('on');
+}
+function CM(){document.getElementById('modal').classList.remove('on')}
+function SV(){
+  const nome=document.getElementById('fn').value.trim();
+  if(!nome){alert('Nome é obrigatório');return}
+  const p={id:EI||NI++,nome,empresa:document.getElementById('fe').value,cargo:document.getElementById('fc').value,canal:document.getElementById('fk').value,status:document.getElementById('fst').value,followup:document.getElementById('ff').value,interesse:document.getElementById('fi').value,notas:document.getElementById('fno').value};
+  if(EI)PP=PP.map(x=>x.id===EI?p:x);else PP.push(p);
+  PER();CM();RC();UD();TT(EI?'Atualizado!':'Prospect salvo!');
+}
+function EP(id){const p=PP.find(x=>x.id===id);if(p)OM(p)}
+function DP(id){if(!confirm('Remover?'))return;PP=PP.filter(x=>x.id!==id);PER();RC();UD()}
+function SP(id){
+  const p=PP.find(x=>x.id===id);if(!p)return;
+  ST('t2');
+  document.getElementById('sn').value=p.nome.split(' ')[0];
+  document.getElementById('sc').value=[p.cargo,p.empresa].filter(Boolean).join(' da ');
+  document.getElementById('sk').value=p.status==='proposta'?'WhatsApp — follow-up retomada':'WhatsApp — indicação';
+  document.getElementById('sx').value=p.interesse||p.notas||'';
+  GS();
+}
+async function GS(){
+  const nome=document.getElementById('sn').value.trim()||'[Nome]';
+  const cargo=document.getElementById('sc').value.trim()||'';
+  const canal=document.getElementById('sk').value;
+  const ctx=document.getElementById('sx').value.trim();
+  const out=document.getElementById('sout');
+  out.innerHTML='<span class="lt2">Gerando com IA...</span>';
+  document.getElementById('sac').style.display='none';
+  try{
+    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:300,messages:[{role:'user',content:`Você é especialista em vendas de Rolex no Brasil. Gere um script CURTO e NATURAL:\n- Nome: ${nome}\n- Cargo: ${cargo}\n- Canal: ${canal}\n- Contexto: ${ctx||'nenhum'}\nRegras: tom consultivo e exclusivo, máximo 4 linhas, português informal elegante. Retorne APENAS o texto da mensagem.`}]})});
+    const data=await res.json();
+    const text=data.content?.[0]?.text||'Erro ao gerar.';
+    LS=text;out.textContent=text;
+    document.getElementById('sac').style.display='flex';
+  }catch(e){out.innerHTML='<span class="lt2">Erro de conexão.</span>'}
+}
+function CS(){if(!LS)return;navigator.clipboard.writeText(LS).catch(()=>{});TT('Copiado!')}
+function SS(){if(!LS)return;SL.unshift({id:Date.now(),canal:document.getElementById('sk').value,nome:document.getElementById('sn').value||'Prospect',text:LS});PER();RS();document.getElementById('sac').style.display='none';TT('Script salvo!')}
+function RS(){
+  const sec=document.getElementById('svs');
+  const li=document.getElementById('svl');
+  if(!SL.length){sec.style.display='none';return}
+  sec.style.display='block';
+  li.innerHTML=SL.map(s=>`<div class="sv"><div class="sm2"><span class="sl">${s.nome} · ${s.canal}</span><div style="display:flex;gap:8px"><button class="ib" onclick="CV(${s.id})"><i class="ti ti-copy"></i></button><button class="ib" onclick="DV(${s.id})"><i class="ti ti-trash"></i></button></div></div><div class="st2">${s.text}</div></div>`).join('');
+}
+function CV(id){const s=SL.find(x=>x.id===id);if(s)navigator.clipboard.writeText(s.text).catch(()=>{});TT('Copiado!')}
+function DV(id){SL=SL.filter(x=>x.id!==id);PER();RS()}
+async function GC(){
+  const pilar=document.getElementById('ip').value;
+  const tom=document.getElementById('it').value;
+  const gr=document.getElementById('igc');
+  IC=[];
+  gr.innerHTML=DS.map((d,i)=>`<div class="ig"><div class="id">${d}</div><div class="if">${FS[i]}</div><div class="ix lt2" id="ig${i}">Gerando...</div><div class="io"><button class="btn sm" onclick="CI(${i})"><i class="ti ti-copy"></i> Copiar</button></div></div>`).join('');
+  await Promise.all(DS.map(async(d,i)=>{
+    try{
+      const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:200,messages:[{role:'user',content:`Pauta Instagram para venda de Rolex.\nDia: ${d} | Formato: ${FS[i]} | Pilar: ${pilar} | Tom: ${tom}\nRetorne APENAS: título curto + legenda pronta (máx 3 linhas). Sem introdução.`}]})});
+      const data=await res.json();
+      const text=data.content?.[0]?.text||'Erro.';
+      IC[i]=text;
+      const el=document.getElementById('ig'+i);
+      if(el){el.textContent=text;el.classList.remove('lt2')}
+    }catch{const el=document.getElementById('ig'+i);if(el)el.textContent='Erro. Tente novamente.'}
+  }));
+}
+function CI(i){const c=IC[i]||document.getElementById('ig'+i)?.textContent;if(c)navigator.clipboard.writeText(c).catch(()=>{});TT('Copiado!')}
+function TT(msg){const t=document.getElementById('toast');t.textContent=msg;t.style.opacity='1';setTimeout(()=>t.style.opacity='0',1800)}
+document.getElementById('modal').addEventListener('click',function(e){if(e.target===this)CM()});
+if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{})}
+UD();RC();RS();
+</script>
+
+
+</body></html>
